@@ -1,5 +1,5 @@
-ssh_user = "travis@circlingcircles.com"
-remote_root = "/home/bhavika/public_html"
+#ssh_user = "travis@circlingcircles.com"
+#remote_root = "/home/bhavika/public_html"
 
 desc "Runs preview"
 task :preview do
@@ -12,11 +12,11 @@ task :build => "styles:clear" do
   system "staticmatic build ."
 end
 
-desc "Clear and generate new styles, build, and deploy"
-task :deploy => :build do
-  puts "** deploying site **"
-  system("rsync -avz --delete site/ #{ssh_user}:#{remote_root}")
-end
+#desc "Clear and generate new styles, build, and deploy"
+#task :deploy => :build do
+  #puts "** deploying site **"
+  #system("rsync -avz --delete site/ #{ssh_user}:#{remote_root}")
+#end
 
 namespace :styles do
   desc "Clear styles"

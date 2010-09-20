@@ -1,12 +1,16 @@
-- @site_name = "Awake | A boheme films production"
+- @site_name = "Awake - A boheme films production"
 - @title_delimiter = " | "
+- @page_description = @site_name
+- @page_keywords = "Awake, film"
 !!!
 %html
   %head
-    %meta{:name => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; CHARSET=utf-8"}
     %title= full_page_title
     - if @page_description
       %meta{:name => "description", :content => @page_description}
+    - if @page_keywords
+      %meta{:name => "keywords", :content => @page_keywords}
     = stylesheets :screen, :media => 'screen, projection'
     = stylesheets :print, :media => 'print'
     /[if lt IE 8]

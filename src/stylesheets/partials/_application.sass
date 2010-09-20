@@ -34,7 +34,7 @@ html
         color: $red
       a.logo
         display: inline-block
-        vertical-align: sub
+        vertical-align: text-top
         background: url(/images/boheme_logo.png) no-repeat left center
         width: 135px
         height: 21px
@@ -96,6 +96,7 @@ html
   background-color: black
   border-top: 4px solid $dark-gray
   color: $red
+  font-weight: bold
   ul
     list-style-type: none
     +container
@@ -104,22 +105,23 @@ html
       float: left
       text-align: center
     li:first-child
+      font-weight: normal
       text-align: left
     li.last
       text-align: right
+      font-weight: normal
       +column(2, true)
   a .logo
     display: inline-block
     width: 25px
     height: 15px
     text-indent: -999em
-    vertical-align: sub
-    background: url(/images/e9logo_Off.png) no-repeat left top
+    vertical-align: baseline
+    position: relative
+    top: 3px
+    background: url(/images/e9logo_Off.png) no-repeat left center
   a:hover .logo
-    background: url(/images/e9Logo_Over.png) no-repeat left top
-
-      
-
+    background: url(/images/e9Logo_Over.png) no-repeat left center
 
 .container
   +container
