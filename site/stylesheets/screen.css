@@ -163,20 +163,24 @@ html {
       #header h1#title #byline a:hover {
         color: #c63210; }
       /* line 35, ./src/stylesheets/partials/_application.sass */
+      #header h1#title #byline a.logo:visited, #header h1#title #byline a.logo:hover, #header h1#title #byline a.logo:link {
+        color: black; }
+      /* line 37, ./src/stylesheets/partials/_application.sass */
       #header h1#title #byline a.logo {
+        color: black;
         display: inline-block;
         vertical-align: text-top;
         background: url(/images/boheme_logo.png) no-repeat left center;
         width: 135px;
         height: 21px; }
 
-/* line 42, ./src/stylesheets/partials/_application.sass */
+/* line 45, ./src/stylesheets/partials/_application.sass */
 #stills {
   border-color: white;
   border-top: 1px solid;
   border-bottom: 1px solid;
   margin-bottom: 1em; }
-  /* line 47, ./src/stylesheets/partials/_application.sass */
+  /* line 50, ./src/stylesheets/partials/_application.sass */
   #stills #slideshow {
     width: 990px;
     margin: 0 auto;
@@ -191,24 +195,24 @@ html {
     * html #stills #slideshow {
       overflow-x: hidden; }
 
-/* line 52, ./src/stylesheets/partials/_application.sass */
+/* line 55, ./src/stylesheets/partials/_application.sass */
 #nav {
   line-height: 38px;
   font-weight: bold;
   border-top: 1px solid #444444;
   border-bottom: 4px solid #222222; }
-  /* line 57, ./src/stylesheets/partials/_application.sass */
+  /* line 60, ./src/stylesheets/partials/_application.sass */
   #nav ul {
     list-style-type: none;
     width: 990px;
     margin: 0 auto;
     overflow: hidden;
     *zoom: 1; }
-    /* line 60, ./src/stylesheets/partials/_application.sass */
+    /* line 63, ./src/stylesheets/partials/_application.sass */
     #nav ul li {
       text-align: center;
       float: left; }
-      /* line 63, ./src/stylesheets/partials/_application.sass */
+      /* line 66, ./src/stylesheets/partials/_application.sass */
       #nav ul li a {
         display: inline;
         float: left;
@@ -219,10 +223,10 @@ html {
         /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
         * html #nav ul li a {
           overflow-x: hidden; }
-      /* line 67, ./src/stylesheets/partials/_application.sass */
+      /* line 70, ./src/stylesheets/partials/_application.sass */
       #nav ul li a.current {
         background: #222222 url(/images/tabs_bg.png) no-repeat 480px; }
-    /* line 69, ./src/stylesheets/partials/_application.sass */
+    /* line 72, ./src/stylesheets/partials/_application.sass */
     #nav ul li.last {
       display: inline;
       float: left;
@@ -231,18 +235,18 @@ html {
       /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
       * html #nav ul li.last {
         overflow-x: hidden; }
-      /* line 71, ./src/stylesheets/partials/_application.sass */
+      /* line 74, ./src/stylesheets/partials/_application.sass */
       #nav ul li.last a.current {
         background: #222222 url(/images/tabs_bg.png) no-repeat -8px; }
 
-/* line 74, ./src/stylesheets/partials/_application.sass */
+/* line 77, ./src/stylesheets/partials/_application.sass */
 #main {
   width: 990px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
   padding-bottom: 40px; }
-  /* line 77, ./src/stylesheets/partials/_application.sass */
+  /* line 80, ./src/stylesheets/partials/_application.sass */
   #main .subhead {
     padding: 2em 40px 0 40px;
     display: inline;
@@ -252,7 +256,7 @@ html {
     /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
     * html #main .subhead {
       overflow-x: hidden; }
-  /* line 81, ./src/stylesheets/partials/_application.sass */
+  /* line 84, ./src/stylesheets/partials/_application.sass */
   #main .content .left {
     display: inline;
     float: left;
@@ -261,10 +265,10 @@ html {
     /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
     * html #main .content .left {
       overflow-x: hidden; }
-    /* line 83, ./src/stylesheets/partials/_application.sass */
+    /* line 86, ./src/stylesheets/partials/_application.sass */
     #main .content .left > * {
       padding: 0 10px 0 40px; }
-  /* line 85, ./src/stylesheets/partials/_application.sass */
+  /* line 88, ./src/stylesheets/partials/_application.sass */
   #main .content .right {
     display: inline;
     float: left;
@@ -273,11 +277,11 @@ html {
     /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
     * html #main .content .right {
       overflow-x: hidden; }
-    /* line 87, ./src/stylesheets/partials/_application.sass */
+    /* line 90, ./src/stylesheets/partials/_application.sass */
     #main .content .right > * {
       padding: 0 40px 0 10px; }
 
-/* line 90, ./src/stylesheets/partials/_application.sass */
+/* line 93, ./src/stylesheets/partials/_application.sass */
 #footer {
   position: fixed;
   width: 100%;
@@ -288,14 +292,14 @@ html {
   border-top: 4px solid #222222;
   color: #c63210;
   font-weight: bold; }
-  /* line 100, ./src/stylesheets/partials/_application.sass */
+  /* line 103, ./src/stylesheets/partials/_application.sass */
   #footer ul {
     list-style-type: none;
     width: 990px;
     margin: 0 auto;
     overflow: hidden;
     *zoom: 1; }
-    /* line 103, ./src/stylesheets/partials/_application.sass */
+    /* line 106, ./src/stylesheets/partials/_application.sass */
     #footer ul li {
       display: inline;
       float: left;
@@ -306,11 +310,11 @@ html {
       /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
       * html #footer ul li {
         overflow-x: hidden; }
-    /* line 107, ./src/stylesheets/partials/_application.sass */
+    /* line 110, ./src/stylesheets/partials/_application.sass */
     #footer ul li:first-child {
       font-weight: normal;
       text-align: left; }
-    /* line 110, ./src/stylesheets/partials/_application.sass */
+    /* line 113, ./src/stylesheets/partials/_application.sass */
     #footer ul li.last {
       text-align: right;
       font-weight: normal;
@@ -321,7 +325,7 @@ html {
       /* line 139, /home/travis/.rvm/gems/ree-1.8.7-2010.01/gems/compass-0.10.5/frameworks/blueprint/stylesheets/./blueprint/_grid.scss */
       * html #footer ul li.last {
         overflow-x: hidden; }
-  /* line 114, ./src/stylesheets/partials/_application.sass */
+  /* line 117, ./src/stylesheets/partials/_application.sass */
   #footer a .logo {
     display: inline-block;
     width: 25px;
@@ -331,11 +335,11 @@ html {
     position: relative;
     top: 3px;
     background: url(/images/e9logo_Off.png) no-repeat left center; }
-  /* line 123, ./src/stylesheets/partials/_application.sass */
+  /* line 126, ./src/stylesheets/partials/_application.sass */
   #footer a:hover .logo {
     background: url(/images/e9Logo_Over.png) no-repeat left center; }
 
-/* line 126, ./src/stylesheets/partials/_application.sass */
+/* line 129, ./src/stylesheets/partials/_application.sass */
 .container {
   width: 990px;
   margin: 0 auto;
