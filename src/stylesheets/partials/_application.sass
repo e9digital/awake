@@ -1,0 +1,125 @@
+body
+  background-color: black
+
+html, * html, *:first-child+html 
+  a.logo
+    text-indent: 0
+    overflow: hidden
+    font-size: 0px
+    line-height: 0px
+
+html
+  height: 102%
+#main
+  +min-height(100%)
+
+
+#header
+  +container
+  text-align: center
+  
+  h1#title
+    +column(6, true)
+    +container
+    #logo
+      width: 990px
+      height: 150px
+      text-indent: -999em
+      background: url(/images/Header_Awake2.jpg) no-repeat left top
+    #byline
+      line-height: 38px
+      a, a:visited, a:active
+        color: white
+      a:hover
+        color: $red
+      a.logo
+        display: inline-block
+        vertical-align: sub
+        background: url(/images/boheme_logo.png) no-repeat left center
+        width: 135px
+        height: 21px
+      
+#stills
+  border-color: white
+  border-top: 1px solid
+  border-bottom: 1px solid
+  margin-bottom: 1em
+  #slideshow
+    +container
+    +column(6)
+    height: 300px
+
+#nav
+  line-height: 38px
+  font-weight: bold
+  border-top: 1px solid $gray
+  border-bottom: 4px solid $dark-gray
+  ul
+    list-style-type: none
+    +container
+    li
+      text-align: center
+      float: left
+      a
+        +column(3)
+        outline: none
+        background-color: black
+      a.current
+        background: $dark-gray url(/images/tabs_bg.png) no-repeat 480px
+    li.last
+      +column(3, true)
+      a.current
+        background: $dark-gray url(/images/tabs_bg.png) no-repeat -8px
+
+#main
+  +container
+  padding-bottom: 40px
+  .subhead
+    padding: 2em 40px 0 40px
+    +column(6, true)
+  .content
+    .left
+      +column(3)
+      > *
+        padding: 0 10px 0 40px
+    .right
+      +column(3, true)
+      > *
+        padding: 0 40px 0 10px
+
+#footer
+  position: fixed
+  width: 100%
+  bottom: 0px
+  left: 0px
+  line-height: 24px
+  background-color: black
+  border-top: 4px solid $dark-gray
+  color: $red
+  ul
+    list-style-type: none
+    +container
+    li
+      +column(2)
+      float: left
+      text-align: center
+    li:first-child
+      text-align: left
+    li.last
+      text-align: right
+      +column(2, true)
+  a .logo
+    display: inline-block
+    width: 25px
+    height: 15px
+    text-indent: -999em
+    vertical-align: sub
+    background: url(/images/e9logo_Off.png) no-repeat left top
+  a:hover .logo
+    background: url(/images/e9Logo_Over.png) no-repeat left top
+
+      
+
+
+.container
+  +container

@@ -1,0 +1,24 @@
+body
+  font-size: 15px
+  line-height: 20px
+  font-family: "Trebuchet MS", Helvetica, sans-serif
+  color: $font_color
+
+  a 
+    text-decoration: none
+    &, &:active, &:visited
+      color: $link_color
+    &:hover, &.current
+      color: $link_hover_color
+
+  h1, h2, h4, h5, h6, p
+    margin: 0 0 1em 0
+  h1, h2
+    font-weight: bold
+    font-size: 18px
+  h1, h3
+    +spaceless
+  h3
+    font-size: 15px
+  h3.name
+    color: $red

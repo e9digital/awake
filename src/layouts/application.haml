@@ -1,0 +1,46 @@
+- @site_name = "Awake | A boheme films production"
+- @title_delimiter = " | "
+!!!
+%html
+  %head
+    %meta{:name => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %title= full_page_title
+    - if @page_description
+      %meta{:name => "description", :content => @page_description}
+    = stylesheets :screen, :media => 'screen, projection'
+    = stylesheets :print, :media => 'print'
+    /[if lt IE 8]
+      = stylesheets :ie, :media => 'screen, projection'
+
+    = javascripts 'jquery-1.4.2.min' 
+    = javascripts 'jquery.cycle.lite.1.0', 'application'
+
+  %body{:id => @body_id, :class => @body_class}
+    #header
+      %h1#title
+        #logo
+          AWAKE
+        #byline
+          a 
+          %a{:href => "http://www.bohemefilms.com", :class => 'logo'}
+            boheme films
+          production (<a href="http://www.bohemefilms.com">www.bohemefilms.com</a>)
+
+    #stills
+      .container
+        #slideshow
+          = partial 'slides'
+    #nav
+      = partial 'nav'
+    #main
+      = yield
+    #footer
+      %ul
+        %li
+          &copy; 2010 bohème films
+        %li
+          %a{:href => "http://www.bohemefilms.com"} www.bohemefilms.com
+        %li.last
+          %a{:href => "http://www.e9digital.com"} 
+            web design by e9digital
+            %span.logo
