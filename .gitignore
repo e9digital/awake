@@ -1,3 +1,5 @@
 .sass-cache
 *.swp
-site/
+*.html
+site/**/*.css
+site/**/*.js
