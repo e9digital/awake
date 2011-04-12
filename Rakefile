@@ -1,5 +1,7 @@
-#ssh_user = "travis@circlingcircles.com"
-#remote_root = "/home/bhavika/public_html"
+ssh_user    = "ubuntu@50.16.218.116"
+remote_root = "/srv/www/youareawake.com"
+ssh_key     = "/home/travis/.ec2/gsg-keypair.pem"
+dropbox_dir = ""
 
 desc "Runs preview"
 task :preview do
@@ -12,11 +14,11 @@ task :build => "styles:clear" do
   system "staticmatic build ."
 end
 
-#desc "Clear and generate new styles, build, and deploy"
-#task :deploy => :build do
-  #puts "** deploying site **"
-  #system("rsync -avz --delete site/ #{ssh_user}:#{remote_root}")
-#end
+desc "Clear and generate new styles, build, and deploy"
+task :deploy => :build do
+  puts "** deploying site **"
+  system("rsync -avz --rsh \"ssh -i #{ssh_key}\" --delete site/ #{ssh_user}:#{remote_root}")
+end
 
 namespace :styles do
   desc "Clear styles"
